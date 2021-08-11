@@ -9,13 +9,13 @@ export default class App extends React.Component {
         super(props);
         this.state = {
             newDate: '',
-            birthday: '1996-04-11'
+            birthday: '1996-04-11',
+            showStats: false
         }
     }
 
     changeBirthday() {
-        console.log(this.state);
-        this.setState({birthday: this.state.newDate});
+        this.setState({birthday: this.state.newDate, showStats: true});
     }
 
     render() {
@@ -28,8 +28,12 @@ export default class App extends React.Component {
                     <Button onClick={() => this.changeBirthday()}>
                         Submit
                     </Button>
-                    <AppStats date={this.state.birthday} />
-                </Form>
+                        {this.state.showStats ? 
+                            <div className='fade age-stats'>
+                                <AppStats date={this.state.birthday} /> 
+                            </div>
+                        : <div />}
+               </Form>
             </div>
         )
     }

@@ -3,3 +3,22 @@
     font-size: 16px;
     text-align: center;
 }
+
+.party-popper {
+    width: 200px;
+    height: 200px;
+}
+
+.fade {
+    animation-name: fade-in;
+    animation-duration: 5s;
+}
+
+.age-stats {
+    opacity: 100
+}
+
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 100}
+}

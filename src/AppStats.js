@@ -1,4 +1,5 @@
 import React from 'react';
+import partyPopper from './assets/party-popper.jpg';
 
 export default class AppStats extends React.Component {
 
@@ -21,6 +22,7 @@ export default class AppStats extends React.Component {
             <div>
                 <h3>{this.props.date}</h3>
                 <h4>Congrats on {this.timeSince(this.props.date)}!</h4>
+                <img src={partyPopper} alt='party popper' className='party-popper' />
             </div>
         );
     }
